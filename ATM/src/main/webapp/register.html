@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+body {
+	font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('image/ATM.png'); 
+            /*background-image: url('image/image.png'); 
+            /*background-image: url('image/istockphoto-2175628060-612x612.png'); /* Use relative path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+}
+
+.container {
+	background: #fff;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+	width: 500px; /* Increased width for a better two-column layout */
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 20px;
+	color: #333;
+}
+
+.input-row {
+	display: flex;
+	gap: 15px; /* Space between input groups */
+	margin-bottom: 15px;
+}
+
+.input-group {
+	flex: 1; /* Allows inputs to evenly share available space */
+}
+
+.input-group label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: #555;
+}
+
+.input-group input, .input-group select {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	outline: none;
+	transition: border-color 0.3s ease;
+}
+
+.input-group input:focus, .input-group select:focus {
+	border-color: #007bff;
+}
+span{
+
+color:"red";
+
+}
+
+.btn {
+	width: 100%;
+	padding: 12px;
+	border: none;
+	border-radius: 25px;
+	background: #007bff;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+	background: #0056b3;
+	transform: translateY(-3px);
+	box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+</style>
+</head>
+
+<body>
+	<div class="container">
+		<h2>Employee Registration Form</h2>
+		<form action="register" onsubmit="Validate()" method="post">
+			
+			<div class="input-row">
+				<div class="input-group">
+					<label for="fullname">Full Name</label> <input type="text"
+						id="fullname" name="fullname" required>
+				</div>
+				<div class="input-group">
+					<label for="email">Email</label> <input type="email" id="email"
+						name="email" required>
+				</div>
+			</div>
+			<div class="input-row">
+				<div class="input-group">
+					<label for="id">Account No<span style="color: red; font-size: 10px;">*Contact Bank</span></label> <input type="text"
+						id="id" name="id" required>
+				</div>
+				<div class="input-group">
+					<label for="password">PIN</label> <input type="password" id="pin"
+						name="pin" required>
+				</div>
+			</div>
+			
+			<div class="input-row">
+				<div class="input-group">
+					<label for="phone">Phone Number</label> <input type="tel"
+						id="phone" name="phone" required>
+				</div>
+				<div class="input-group">
+					<label for="dob">Date of Birth</label> <input type="date" id="dob"
+						name="dob" required>
+				</div>
+			</div>
+			<div class="input-row">
+				<div class="input-group">
+					<label for="gender">Gender</label> <select id="gender"
+						name="gender" required>
+						<option value="">Select Gender</option>
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+						<option value="other">Other</option>
+					</select>
+				</div>
+				<div class="input-group">
+					<label for="ifsc">IFSC CODE 
+    <span style="color: red; font-size: 10px;">*Refer the bank</span>
+</label>
+<input type="text" id="ifsc" name="ifsc" required>
+
+				</div>
+				
+			</div>
+			<div class="input-row">
+				<div class="input-group">
+					<label for="city">Address(city)</label> <select id="city"
+						name="city" required>
+						<option value="">Select city</option>
+						<option value="Vellore">Vellore</option>
+						<option value="Gudiyatham">Gudiyatham</option>
+						<option value="Arani">Arani</option>
+						<option value="Ranipetai">Ranipetai</option>
+						<option value="others">others</option>
+					</select>
+				</div>
+				<div class="input-group">
+					<label for="amount">Initial Amount</label> <input type="number"
+						id="amt" name="amt" required>
+				</div>
+				
+			</div>
+			<button type="submit" class="btn">Register</button>
+		</form>
+	</div>
+</body>
+
+
+</html>

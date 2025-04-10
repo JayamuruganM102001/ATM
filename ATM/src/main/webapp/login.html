@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<style>
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+body {
+	font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('image/ATM.png'); /* Use relative path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            }
+
+.container {
+	background: #fff;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+	width: 400px; /* Increased width for a better two-column layout */
+	margin-left:65%;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 20px;
+	color: #333;
+}
+
+.input-row {
+	display: flex;
+	gap: 15px; /* Space between input groups */
+	margin-bottom: 15px;
+}
+
+.input-group {
+	flex: 1; /* Allows inputs to evenly share available space */
+}
+
+.input-group label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: #555;
+}
+
+.input-group input, .input-group select {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	outline: none;
+	transition: border-color 0.3s ease;
+}
+
+.input-group input:focus, .input-group select:focus {
+	border-color: #007bff;
+}
+
+.btn {
+	width: 100%;
+	padding: 12px;
+	border: none;
+	border-radius: 25px;
+	background: #007bff;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+	background: #0056b3;
+	transform: translateY(-3px);
+	box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+</style>
+</head>
+
+<body>
+	<div class="container">
+		<h2>Account Info</h2>
+		<form action="demo" method="get">
+			<div class="input-row">
+				<div class="input-group">
+					<label for="Id">Account NO</label> <input type="text"
+						id="id" name="id" required>
+				</div>
+				
+			</div>
+			<div class="input-row">
+				<div class="input-group">
+					<label for="Password">PIN</label> <input type="Password" id="pword"
+						name="pword" required>
+				</div>
+				
+			</div>
+			
+			<button type="submit" class="btn" id="btn1">Submit</button>
+			
+			
+			
+        
+		</form>
+	</div>
+	
+	
+</body>
+
+
+</html>
