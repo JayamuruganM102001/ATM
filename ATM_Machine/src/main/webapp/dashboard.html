@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Dashboard</title>
+    
+    <style type="text/css">
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #E3E3E3, #A7A7A7);
+    height: 100vh; /* Ensures it covers the full viewport */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* ATM Container */
+.atm-container {
+    display: flex;
+    width: 800px;
+    height: 500px;
+    background: #003087;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Left Panel (User Info) */
+.left-panel {
+    width: 30%;
+    background: #002366;
+    padding: 20px;
+}
+
+.left-panel h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.left-panel p {
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.left-panel strong {
+    font-size: 22px;
+}
+
+/* Right Panel (Buttons) */
+.right-panel {
+    width: 70%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Button Grid */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* ATM Buttons */
+.atm-button {
+    background: #009BFF;
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.atm-button:hover {
+    background: #0820fc;
+}
+
+.other {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Quick Cash Button */
+.quick-cash {
+    background: #E40046;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    padding: 15px 20px;
+    width: 100%;
+}
+
+.quick-cash span {
+    font-size: 24px;
+}
+    </style>
+</head>
+<body >
+    <div class="atm-container">
+        <!-- Left Section (User Info) -->
+        <div class="left-panel">
+            <h2>ATM</h2>
+            <p>Welcome <br><strong id="fullname"> </strong></p>
+            
+            <p>Savings #2<br><strong>$795</strong></p>
+        </div>
+
+        <!-- Right Section (Buttons) -->
+        <div class="right-panel">
+            <div class="button-grid">
+                <!-- <button class="atm-button">Get Cash</button> -->
+                <button class="atm-button" onclick="location.href='deposit.html'">Deposit</button>
+                <button class="atm-button" onclick="location.href='withdraw.html'">With Draw</button>
+                <button class="atm-button">Transfer</button>
+                <!-- <button class="atm-button">Account Settings</button> -->
+                <button class="atm-button other">Other</button>
+            </div>
+
+            <!-- Quick Cash Button -->
+            <button class="quick-cash">
+                <span>Welcome</span> Quick Cash →
+            </button>
+        </div>
+    </div>
+    
+<script>
+    
+    window.onload = function () {
+        const params = new URLSearchParams(window.location.search);
+        const uname = params.get("id");
+        
+        if (uname) {
+            document.getElementById("fullname").innerHTML = uname;
+            document.getElementById("fullname").readOnly = true;
+        }
+    };
+</script>
+    
+</body>
+</html>

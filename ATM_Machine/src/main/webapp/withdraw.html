@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amount Withdraw</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('image/ATM.png'); /* Use relative path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            margin-left:65%;
+        }
+        .container:hover {
+            transform: scale(1.05);
+        }
+        input {
+            padding: 10px;
+            width: 200px;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        input:focus {
+            border-color: #2ecc71;
+            box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter WithDraw Amount</h2>
+        <form action="withdraw" method="get">
+        
+        <input type="text" placeholder="Account NO." id="id" name="id" required>
+        <br>
+        <span style="color: red; font-size: 10px;">*Double-check required&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;</span>
+        <br><br>
+        <input type="number" placeholder="Enter amount" id="wamount" name=wamount>
+        <br><br><br>
+        <input type="Password" placeholder="Enter PIN" id="pword" name="pword" required>
+        <br>
+        <button type="submit" class="btn" id="btn1">With Draw</button>
+        
+        <a href="dashboard.html">back</a>
+        
+        </form>
+    </div>
+
+    <script>
+        function submitAmount() {
+            let amount = document.getElementById('wamount').value;
+            let id = document.getElementById('id').value;
+            let pin = document.getElementById('psd').value;
+            if (!amount) {
+            	alert('Please enter an amount');
+            } 
+            if (!id) {
+            	alert('Please enter an ACCOUNT NO');
+            } 
+            if (!pin) {
+            	alert('Please enter an PIN');
+            } 
+        }
+    </script>
+    
+</body>
+
+
+</html>
